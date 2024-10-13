@@ -8,5 +8,6 @@
 import Foundation
 
 protocol FTRecipeListServiceProtocol {
-  func fetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void)
+  func fetchRecipes() async throws -> [FTRecipe]
+  func getFetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void)
 }

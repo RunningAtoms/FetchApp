@@ -30,7 +30,27 @@ struct FTAPI {
 
 class FTRecipeListService: FTRecipeListServiceProtocol {
 
-  func fetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void) {
+  func fetchRecipes() async throws -> [FTRecipe] {
+
+    typealias RecipeListContinuation = CheckedContinuation<[FTRecipe], Error>
+
+    return try await withCheckedThrowingContinuation { (continuation: RecipeListContinuation) in
+      self.getFetchRecipes { result in
+
+        switch result {
+          case .success(let data):
+            continuation.resume(returning: data)
+          case .failure(let error):
+            continuation.resume(throwing: error)
+        }
+
+      }
+    }
+
+  }
+
+
+  func getFetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void) {
 
     if let url = FTAPI.getRecipesJSONURL() {
       var urlRequest = URLRequest(url: url)

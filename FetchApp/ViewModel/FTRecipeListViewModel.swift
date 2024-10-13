@@ -53,7 +53,7 @@ class FTRecipeListViewModel: FTRecipeListViewModelProtocol, FTBaseViewModel {
 
   func fetchRecipes() {
 
-    recipeListServiceImpl.fetchRecipes { [weak self] result in
+    recipeListServiceImpl.getFetchRecipes { [weak self] result in
       guard let self = self else {
         return
       }

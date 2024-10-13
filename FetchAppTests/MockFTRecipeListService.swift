@@ -19,7 +19,22 @@ class MockFTRecipeListService: FTRecipeListServiceProtocol {
     fileName = jsonFileName
   }
 
-  func fetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void) {
+  func fetchRecipes() async throws -> [FetchApp.FTRecipe] {
+    guard let fileURL = Bundle(for: type(of: self)).url(forResource: fileName, withExtension: "json") else {
+      return []
+    }
+
+    do {
+      let data = try Data(contentsOf: fileURL)
+      let decoder = JSONDecoder()
+      let testRecipeList = try decoder.decode(FTRecipeList.self, from: data)
+      return testRecipeList.recipes
+    } catch {
+      return []
+    }
+  }
+
+  func getFetchRecipes(completion: @escaping (Result<[FTRecipe], FTError>) -> Void) {
     guard let fileURL = Bundle(for: type(of: self)).url(forResource: fileName, withExtension: "json") else {
       completion(.failure(FTError.invalidURL))
       return

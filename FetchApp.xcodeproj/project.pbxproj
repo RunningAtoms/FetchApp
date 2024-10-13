@@ -37,6 +37,11 @@
 		E6B9F00D2CB5DC52006286E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E6B9F00C2CB5DC52006286E4 /* Kingfisher */; };
 		E6B9F00F2CB5EC64006286E4 /* FTAppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9F00E2CB5EC64006286E4 /* FTAppFactory.swift */; };
 		E6B9F0112CB5F72E006286E4 /* FTRecipeListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9F0102CB5F72E006286E4 /* FTRecipeListViewModelProtocol.swift */; };
+		E6E426AD2CBC4727007E9E4A /* FTRecipeListSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E426AC2CBC4727007E9E4A /* FTRecipeListSwiftUIViewController.swift */; };
+		E6E426AF2CBC4735007E9E4A /* FTRecipeListSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E426AE2CBC4735007E9E4A /* FTRecipeListSwiftUIViewModel.swift */; };
+		E6E426B22CBC473E007E9E4A /* FTRecipeListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E426B02CBC473E007E9E4A /* FTRecipeListSwiftUIView.swift */; };
+		E6E426B32CBC473E007E9E4A /* FTRecipeRowSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E426B12CBC473E007E9E4A /* FTRecipeRowSwiftUIView.swift */; };
+		E6E426B52CBC4845007E9E4A /* FTRecipeListSwiftUIViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E426B42CBC4845007E9E4A /* FTRecipeListSwiftUIViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,11 @@
 		E6B9F0092CB5D68A006286E4 /* FTRecipeListViewModelErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTRecipeListViewModelErrorTest.swift; sourceTree = "<group>"; };
 		E6B9F00E2CB5EC64006286E4 /* FTAppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAppFactory.swift; sourceTree = "<group>"; };
 		E6B9F0102CB5F72E006286E4 /* FTRecipeListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTRecipeListViewModelProtocol.swift; sourceTree = "<group>"; };
+		E6E426AC2CBC4727007E9E4A /* FTRecipeListSwiftUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRecipeListSwiftUIViewController.swift; sourceTree = "<group>"; };
+		E6E426AE2CBC4735007E9E4A /* FTRecipeListSwiftUIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRecipeListSwiftUIViewModel.swift; sourceTree = "<group>"; };
+		E6E426B02CBC473E007E9E4A /* FTRecipeListSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRecipeListSwiftUIView.swift; sourceTree = "<group>"; };
+		E6E426B12CBC473E007E9E4A /* FTRecipeRowSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRecipeRowSwiftUIView.swift; sourceTree = "<group>"; };
+		E6E426B42CBC4845007E9E4A /* FTRecipeListSwiftUIViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTRecipeListSwiftUIViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,11 +160,11 @@
 				E6B9EFD62CB5AA65006286E4 /* Views */,
 				E6B9EFD52CB5AA49006286E4 /* BaseInfra */,
 				E6B9EFA52CB5A916006286E4 /* AppDelegate.swift */,
+				E6B9F00E2CB5EC64006286E4 /* FTAppFactory.swift */,
 				E6B9EFA72CB5A916006286E4 /* SceneDelegate.swift */,
 				E6B9EFAE2CB5A918006286E4 /* Assets.xcassets */,
 				E6B9EFB02CB5A918006286E4 /* LaunchScreen.storyboard */,
 				E6B9EFB32CB5A918006286E4 /* Info.plist */,
-				E6B9F00E2CB5EC64006286E4 /* FTAppFactory.swift */,
 			);
 			path = FetchApp;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 				E6B9F0072CB5D622006286E4 /* FTRecipeListViewModelEmptyTest.swift */,
 				E6B9F0092CB5D68A006286E4 /* FTRecipeListViewModelErrorTest.swift */,
 				E6B9F0052CB5D5B7006286E4 /* MockFTRecipeListService.swift */,
+				E6E426B42CBC4845007E9E4A /* FTRecipeListSwiftUIViewModelTests.swift */,
 			);
 			path = FetchAppTests;
 			sourceTree = "<group>";
@@ -198,6 +209,8 @@
 		E6B9EFD62CB5AA65006286E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6E426B02CBC473E007E9E4A /* FTRecipeListSwiftUIView.swift */,
+				E6E426B12CBC473E007E9E4A /* FTRecipeRowSwiftUIView.swift */,
 				E6B9EFF62CB5AF2E006286E4 /* FTRecipeTableViewCell.swift */,
 			);
 			path = Views;
@@ -206,6 +219,7 @@
 		E6B9EFD72CB5AA6A006286E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E6E426AE2CBC4735007E9E4A /* FTRecipeListSwiftUIViewModel.swift */,
 				E6B9EFF82CB5AF87006286E4 /* FTRecipeListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -231,6 +245,7 @@
 		E6B9EFDA2CB5AA7F006286E4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E6E426AC2CBC4727007E9E4A /* FTRecipeListSwiftUIViewController.swift */,
 				E6B9EFEB2CB5AD39006286E4 /* FTRecipeListViewController.swift */,
 			);
 			path = ViewController;
@@ -398,17 +413,21 @@
 				E6B9EFEF2CB5AD5E006286E4 /* FTRecipeListServiceProtocol.swift in Sources */,
 				E6B9EFE42CB5AC6A006286E4 /* FTNiblessTableViewCell.swift in Sources */,
 				E6B9EFDE2CB5AADB006286E4 /* FTNiblessViewController.swift in Sources */,
+				E6E426B22CBC473E007E9E4A /* FTRecipeListSwiftUIView.swift in Sources */,
 				E6B9F0112CB5F72E006286E4 /* FTRecipeListViewModelProtocol.swift in Sources */,
 				E6B9EFEC2CB5AD39006286E4 /* FTRecipeListViewController.swift in Sources */,
+				E6E426B32CBC473E007E9E4A /* FTRecipeRowSwiftUIView.swift in Sources */,
 				E6B9EFA62CB5A916006286E4 /* AppDelegate.swift in Sources */,
 				E6B9EFE02CB5AB0A006286E4 /* FTNavigationController.swift in Sources */,
 				E6B9F00F2CB5EC64006286E4 /* FTAppFactory.swift in Sources */,
 				E6B9EFF32CB5ADEC006286E4 /* FTRecipeList.swift in Sources */,
 				E6B9EFF92CB5AF87006286E4 /* FTRecipeListViewModel.swift in Sources */,
 				E6B9EFF72CB5AF2E006286E4 /* FTRecipeTableViewCell.swift in Sources */,
+				E6E426AD2CBC4727007E9E4A /* FTRecipeListSwiftUIViewController.swift in Sources */,
 				E6B9EFFC2CB5B1A3006286E4 /* FTError.swift in Sources */,
 				E6B9EFF12CB5AD72006286E4 /* FTRecipeListService.swift in Sources */,
 				E6B9EFE82CB5ACBD006286E4 /* FTBaseModel.swift in Sources */,
+				E6E426AF2CBC4735007E9E4A /* FTRecipeListSwiftUIViewModel.swift in Sources */,
 				E6B9EFA82CB5A916006286E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +438,7 @@
 			files = (
 				E6B9F00A2CB5D68A006286E4 /* FTRecipeListViewModelErrorTest.swift in Sources */,
 				E6B9EFFE2CB5C281006286E4 /* FTRecipeListViewModelValidTest.swift in Sources */,
+				E6E426B52CBC4845007E9E4A /* FTRecipeListSwiftUIViewModelTests.swift in Sources */,
 				E6B9F0062CB5D5B8006286E4 /* MockFTRecipeListService.swift in Sources */,
 				E6B9F0082CB5D622006286E4 /* FTRecipeListViewModelEmptyTest.swift in Sources */,
 			);

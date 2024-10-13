@@ -7,6 +7,11 @@ Hi Fetch Team - I am very excited to explore iOS opportunities with your team. I
 3. I also used KingFisher (https://github.com/onevcat/Kingfisher) swift package - please ensure that XCode can access this package if you are running behind a company VPN
 4. There is a class called **FTAppFactory** and it has a property **useSwiftUI** if it is set to true, app will show SwiftUI powered user experience and if it is set to false, it will show UIKit powered user experience.
 
+   <img width="894" alt="Screenshot 2024-10-13 at 2 19 21 PM" src="https://github.com/user-attachments/assets/a385fb89-ffbd-4ae1-94c6-0b0209237674">
+
+   Please note: After toggling the **useSwiftUI**, please compile and relaunch the app to launch either UIKit / SwiftUI experience.
+
+
 Here is video of the app UX
 
 **SwiftUI powered user experience** 

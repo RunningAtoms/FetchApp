@@ -14,7 +14,7 @@ class FTAppFactory {
 
   private init() { }
 
-  private var useSwiftUI = true
+  private var useSwiftUI = false
 
   public func makeRootNavigationViewController() -> FTNavigationController {
     let rootNavigationController = FTNavigationController()

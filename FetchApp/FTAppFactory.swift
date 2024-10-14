@@ -45,7 +45,7 @@ class FTAppFactory {
     return FTRecipeListViewModel(recipeListService: makeRecipeListService())
   }
 
-  public func makeSwiftUIView() -> UIHostingController<FTRecipeListSwiftUIView> {
+  @MainActor public func makeRecipeListSwiftUIHostingViewController() -> UIHostingController<FTRecipeListSwiftUIView> {
     // Set up the SwiftUI View
     let recipeViewModel = FTRecipeListSwiftUIViewModel(recipeService: makeRecipeListService())
     let recipeListView = FTRecipeListSwiftUIView(viewModel: recipeViewModel)

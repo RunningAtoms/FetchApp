@@ -19,7 +19,7 @@ class FTRecipeListSwiftUIViewController: FTBrandedViewController {
 
   private func setupUI() {
 
-    let hostingController = FTAppFactory.shared.makeSwiftUIView()
+    let hostingController = FTAppFactory.shared.makeRecipeListSwiftUIHostingViewController()
     // Add the hosting controller as a child
     addChild(hostingController)
 

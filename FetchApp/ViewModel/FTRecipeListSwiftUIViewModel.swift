@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class FTRecipeListSwiftUIViewModel: ObservableObject {
 
   // Published property to notify the view when the recipe list changes
@@ -38,20 +39,12 @@ class FTRecipeListSwiftUIViewModel: ObservableObject {
     do {
       // Call the async function to fetch recipes
       let fetchedRecipes = try await self.recipeServiceImpl.fetchRecipes()
-
-      // Update the recipes property (UI will automatically update due to @Published)
-      DispatchQueue.main.async { [weak self] in
-        self?.downloadedRecipes = fetchedRecipes
-        self?.sortAndFilterRecipes()
-      }
-
+      self.downloadedRecipes = fetchedRecipes
+      self.sortAndFilterRecipes()
     } catch {
-      // Handle any errors that occur during fetch
-      DispatchQueue.main.async { [weak self] in
-        self?.downloadedRecipes = []
-        self?.sortAndFilterRecipes()
-        self?.errorMessage = "Failed to load recipes: \(error.localizedDescription)"
-      }
+      self.downloadedRecipes = []
+      self.sortAndFilterRecipes()
+      self.errorMessage = "Failed to load recipes: \((error as! FTError).localizedDescription)"
     }
   }
 
